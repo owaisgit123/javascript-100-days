@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="7th_class.js" defer ></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">String Methods and  Properties  </h1>
+    <p>before starting string  Methods and Properties we  need know that string are  indexed So basically we can access  any single character of a  string  by doing  something  like this  .</p>
+    <p>Expression ' Helle World  ' [1] </p>
+    <p>Result ' e'</p>
+    <p> There  is  only  one property that exists</p>
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Property</h1>
+    <ul>
+        <li>length</li>
+    </ul>
+    <h1  style="font-family: Georgia, 'Times New Roman', Times, serif;">Methods (   Whithout Argument  )</h1>
+    <ul>
+        <li>toUpperCase()</li>
+        <li>toLowerCase()</li>
+        <li>trim()</li>
+        <li>trimStart()</li>
+        <li>trimEnd()</li>
+    </ul>
+    <h1 style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Methods (With  Aroument  )</h1>
+    <ul> 
+       <li> indcludes()</li>
+       <li> indexOf </li>
+       <li> replace()</li>
+       <li> replaceAll()</li>
+       <li> concat()</li>
+       <li> padStar()</li>
+       <li> padEnd()</li>
+       <li> charAl()</li>
+       <li> charCodeAt()</li>
+       <li> split()</li>
+    </ul>
+    <!-- String Properties and Methods in JavaScript - Notes -->
+    <section style="background:#f9f9f9; border:1px solid #ddd; padding:16px; margin:16px 0; border-radius:8px;">
+        <h2 style="color:#2d5c8a;">JavaScript String Properties & Methods (Notes)</h2>
+        <h3>Property</h3>
+        <ul>
+            <li><b>length</b>: Returns the total number of characters in a string.<br>
+                <code>"Hello".length // 5</code>
+            </li>
+        </ul>
+        <h3>Methods (Without Arguments)</h3>
+        <ul>
+            <li><b>toUpperCase()</b>: Converts all characters to uppercase.<br>
+                <code>"hello".toUpperCase() // "HELLO"</code>
+            </li>
+            <li><b>toLowerCase()</b>: Converts all characters to lowercase.<br>
+                <code>"HELLO".toLowerCase() // "hello"</code>
+            </li>
+            <li><b>trim()</b>: Removes whitespace from both ends.<br>
+                <code>"  hello  ".trim() // "hello"</code>
+            </li>
+        </ul>
+        <h3>Methods (With Arguments)</h3>
+        <ul>
+            <li><b>includes(substring)</b>: Checks if substring exists. Returns true/false.<br>
+                <code>"Hello World".includes("World") // true</code>
+            </li>
+            <li><b>indexOf(substring)</b>: Returns index of substring, -1 if not found.<br>
+                <code>"Hello World".indexOf("World") // 6</code>
+            </li>
+            <li><b>replace(search, replacement)</b>: Replaces first occurrence.<br>
+                <code>"Hello World".replace("World", "JS") // "Hello JS"</code>
+            </li>
+            <li><b>replaceAll(search, replacement)</b>: Replaces all occurrences.<br>
+                <code>"Hello Hello".replaceAll("Hello", "Hi") // "Hi Hi"</code>
+            </li>
+        </ul>
+        <h3>Other Useful Methods</h3>
+        <ul>
+            <li><b>concat()</b>: Joins two or more strings.<br>
+                <code>"Hello".concat(" World") // "Hello World"</code>
+            </li>
+            <li><b>padStart(targetLength, padString)</b>: Pads start of string.<br>
+                <code>"5".padStart(3, "0") // "005"</code>
+            </li>
+            <li><b>padEnd(targetLength, padString)</b>: Pads end of string.<br>
+                <code>"5".padEnd(3, "0") // "500"</code>
+            </li>
+            <li><b>charAt(index)</b>: Returns character at index.<br>
+                <code>"Hello".charAt(1) // "e"</code>
+            </li>
+            <li><b>charCodeAt(index)</b>: Returns Unicode of character at index.<br>
+                <code>"Hello".charCodeAt(1) // 101</code>
+            </li>
+            <li><b>split(separator)</b>: Splits string into array.<br>
+                <code>"a,b,c".split(",") // ["a","b","c"]</code>
+            </li>
+        </ul>
+        <h3>Example from Your Code</h3>
+        <pre style="background:#eee; padding:8px; border-radius:4px;">const usertime = '  12:00 PM  my  time  is  12:00 PM  ';
+console.log(usertime.length); // Property: length
+
+const userIntroduction = '  Hello, my name is owais. I am a student in the 10th class.  '.toUpperCase();
+console.log(userIntroduction); // Method: toUpperCase()
+
+const userName = '  Owais  '.trim();
+console.log(userName); // Method: trim()
+
+const userEmail = ' OWAIS163737@GMAIL.COM  '.toLowerCase();
+console.log(userEmail); // Method: toLowerCase()
+
+const useradress = '  123 Main Street, City, Country  '.toUpperCase().trim().toLowerCase();
+console.log(useradress); // Method chain: toUpperCase(), trim(), toLowerCase()
+
+const studentDetails = ' Name: Owais, Age: 17, Class: 10th, School: ABC High School  '.includes('xz');
+console.log(studentDetails); // Method: includes()
+
+const classDetails = ' Class: 10th, Section: A, Roll No: 25  '.indexOf('Class') !== -1;
+console.log(classDetails); // Method: indexOf()
+
+const userInfo1 = 'Owais, 17, Student, ABC High School  '.indexOf('School');
+console.log(userInfo1); // Method: indexOf()
+
+const Replace1 = 'Owais, 17, Student, ABC High School  '.replace('Owais', 'Hamza i am student 10th class');
+console.log(Replace1); // Method: replace()
+
+const Replace2 = 'Owais, 17, Student, ABC High School  '.replaceAll('O', usertime);
+console.log(Replace2); // Method: replaceAll()
+        </pre>
+    </section>
+    <!-- End JS Notes -->
+</body>
+</html>
